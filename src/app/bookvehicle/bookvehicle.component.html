@@ -1,0 +1,55 @@
+<form #myForm="ngForm" (ngSubmit)="addadd(myForm)">
+    <div class="container">
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-4">
+                <div class="col-md-12">
+                        <h3>Enter Address</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="flatNo">Flat No</label>
+                        <input type="number" class="form-control" id="flatNo" name="flatNo" placeholder="Enter flat no"
+                        [(ngModel)]="address.flatNo">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="buildingName">Building Name</label>
+                        <input type="text" class="form-control" id="buildingNme" name="buildingNme" placeholder="Enter building name"
+                        [(ngModel)]="address.buildingNme">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="streetName">Street Name</label>
+                            <input type="text" class="form-control" id="streetName" name="streetName" placeholder="Enter street name"
+                            [(ngModel)]="address.streetName">
+                        </div>
+                </div>
+                <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="area">Area</label>
+                            <input type="text" class="form-control" id="area" name="area" placeholder="Enter area"
+                            [(ngModel)]="address.area">
+                        </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="Enter city"
+                        [(ngModel)]="address.city">
+                    </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button type="submit" style='margin-right:16px' class="btn btn-primary">Add</button>
+                </div>
+            </div>
+                <div class="col-md-12">
+                    
+                </div>
+            </div>
+    </div>
+</form>

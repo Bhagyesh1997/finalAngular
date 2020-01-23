@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-md-6">
+        <img src="../../assets/images/bike.jpg" style="width: 120mm;height: 65mm;">
+    </div>
+    <div class="col-md-6">
+            <h2>{{details.vehicleId.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{details.model}}</h2>
+            <button type="button" (click)="f1()" class="btn btn-danger">Book Vehicle</button>
+    </div>
+
+</div>
+
+
+<h2 style="text-align: center;">Specifications</h2>
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3" style="background-color:lavender;"><h4>Color:</h4></div>
+          <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.color}}</h4></div>
+          <div class="col-sm-3" style="background-color:lavender;"><h4>Engine:</h4></div>
+          <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.engine}}</h4></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavender;"><h4>ABS:</h4></div>
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.abs}}</h4></div>
+            <div class="col-sm-3" style="background-color:lavender;"><h4>Mileage:</h4></div>
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.mileage}}</h4></div>
+            <div class="col-sm-3" style="background-color:lavender;"><h4>Model:</h4></div>
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.model}}</h4></div>
+            <div class="col-sm-3" style="background-color:lavender;"><h4> Showroom Price:</h4></div>
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.price}}</h4></div>
+            <div class="col-sm-3" style="background-color:lavender;"><h4>Tyre:</h4></div>
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.tyre}}</h4></div>
+            <div class="col-sm-3" style="background-color:lavender;"><h4>Wheels:</h4></div>
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h4>{{details.wheels}}</h4></div>
+        </div>
+</div>
+      

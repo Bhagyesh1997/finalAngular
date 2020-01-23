@@ -1,0 +1,49 @@
+<form (ngSubmit)="test()">
+        <div class="container">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name"
+                            [(ngModel)]="book.name" required="required">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+                            [(ngModel)]="book.email" required="required">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter contact no"
+                                [(ngModel)]="book.phone" required="required">
+                            </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="vehicle">Select vehicle</label>
+                            <select (change)="checkItem($event)" style="font-family: monospace;color: black" class="form-control" id="menulist">
+                    <option class="selectId" value="{{item}}" *ngFor="let item of menu">{{item}}</option>
+                    </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                    <label for="date">Pick a date</label>
+                    <input type="date" name="date" onload="getDate()" id="date" class="form-control" required="required" value="">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button type="submit" style="margin-top: 2mm;" class="btn btn-primary">Book Drive</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        </form>

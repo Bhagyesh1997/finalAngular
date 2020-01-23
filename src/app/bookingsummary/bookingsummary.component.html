@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Your Orders</h2>
+        <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Booking Date</th>
+                    <!-- <th scope="col">Select Vehicle</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let v of vehicle" ng-click="selectedVehicle()">
+                    <td>{{v.detailsId.vehicleId.name}}</td>
+                    <td>{{v.detailsId.color}}</td>
+                    <td>{{v.detailsId.price}}</td>
+                    <td>{{v.bookingDate}}</td>
+                    <td><button type="button" (click)="view(v.detailsId.detailsId)" class="btn btn-primary">Change Vehicle</button></td>
+                    <td><button type="button" (click)="cancel(v.detailsId.detailsId)" class="btn btn-danger">Cancel Vehicle</button></td>
+                  </tr>
+                </tbody>
+        </table>
+</div>

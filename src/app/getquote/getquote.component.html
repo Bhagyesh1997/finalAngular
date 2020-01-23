@@ -1,0 +1,51 @@
+<div class="container">
+        <div class="col-md-4">
+               <h1>Get Quotation</h1> 
+        </div>
+        <div class="col-md-4">
+                <div>
+                        <h4>Vehicle Name</h4>
+                </div>
+                <div>
+                        <select (change)="checkItem1($event)" style="font-family: monospace;color: black" class="form-control"
+                        id="menulist1">
+                        <option value="">--select--</option>
+                        <option class="selectId" value="{{item1}}" *ngFor="let item1 of menu1">{{item1}}</option>
+                </select>
+                </div>
+                <div>
+                        <h4>Vehicle Color</h4>
+                        </div>
+                        <div>
+                                <select (change)="checkItem2($event)" style="font-family: monospace;color: black" class="form-control"
+                                id="menulist2">
+                                <option value="">--select--</option>
+                                <option class="selectId" value="{{item2}}" *ngFor="let item2 of menu2">{{item2}}</option>
+                        </select>
+                </div>
+        </div>
+        <div class="col-md-4">
+                
+        </div>
+</div>
+<br />
+<br />
+
+<div class="container">
+        <table style="width: 100%;">
+                <tr>
+                        <th>Vehicle Name</th>
+                        <th>Color</th>
+                        <th>Model</th>
+                        <th>Engine</th>
+                        <th>Price(Ex*)</th>
+                </tr>
+                <tr>
+                       <td>{{data.vehicleId.name}}</td>
+                       <td>{{data.color}}</td>
+                       <td>{{data.model}}</td>
+                       <td>{{data.engine}}</td>
+                       <td>{{data.price}}</td>
+                </tr>
+        </table>
+</div>

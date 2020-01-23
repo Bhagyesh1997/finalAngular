@@ -1,0 +1,21 @@
+<div class="container">
+        <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Price</th>
+                    <th></th>
+                    <!-- <th scope="col">Select Vehicle</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let v of vehicle" ng-click="selectedVehicle()">
+                    <td>{{v.vehicleId.name}}</td>
+                    <td>{{v.color}}</td>
+                    <td>{{v.price}}</td>
+                    <td><button type="button" (click)="view(v.detailsId)" class="btn btn-primary">Read More ..</button></td>
+                  </tr>
+                </tbody>
+        </table>
+</div>

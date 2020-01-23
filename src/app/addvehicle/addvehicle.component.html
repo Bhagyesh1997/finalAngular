@@ -1,0 +1,28 @@
+
+<form>
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+            <div class="col-md-12"><h1>Add New Vehicle</h1></div>        
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="name" style="margin-top: 5mm;">Vehicle Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name"
+                    [(ngModel)]="name">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="file" style="margin-top: 5mm;">File</label>
+                    <input type="file" class="form-control" accept="image/*" (change)="onSelectThumbnail($event)" style="height: 100%;">
+                  </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button type="submit" (click)="onAdd" class="btn btn-primary">Add Vehicle</button>
+                </div>
+            </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</form>

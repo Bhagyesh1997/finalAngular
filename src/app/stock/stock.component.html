@@ -1,0 +1,42 @@
+
+
+<div class="container">
+
+        <div class="table-fixed" style="width: 100%"> 
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Colour</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Count</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of data">
+                <td>{{s.detailsId}}</td>
+                <td>{{s.vehicleId.name}}</td>
+                <td>{{s.color}}</td>
+                <td>{{s.model}}</td>
+                <td>{{s.price}}</td>
+                <td>{{s.count}}</td>
+                <td><button type="button" (click)="update(s.detailsId)" class="btn btn-primary">Update</button>
+                <button type="button" (click)="delete(s.detailsId)" class="btn btn-danger" style="margin-left: 3mm;">Delete</button></td>
+                <!-- <td><img style="height: 90px;width: 100%" src="data:image/gif;base64,{{s.vehicleId.image}}"></td> -->
+                <!-- <td>{{emp.address}}</td> -->
+                <!-- <td><img style="height: 90px;width: 100%" src="data:image/gif;base64,{{emp.image}}" alt=""><br>
+                </td>
+                <td>
+                <button type="button" (click)="delete(emp.no)"class="btn btn-danger">Delete</button>
+                </td>
+                <td>
+                    <button type="button" routerLink="/update/{{emp.no}}" class="btn btn-warning">Update</button>
+                </td> -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>

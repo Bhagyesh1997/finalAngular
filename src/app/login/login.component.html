@@ -1,0 +1,29 @@
+<form (ngSubmit)="validate()" class="was-validated">
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h3>Log In</h3>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="email"  style="margin-top: 7mm;">Username</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+                    [(ngModel)]="user.email" required="required">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+                    [(ngModel)]="user.password" required="required">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </div>
+            </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</form> 
+

@@ -1,0 +1,40 @@
+<div class="container">
+        <div class="col-md-6">
+               <h1>Change Vehicle</h1> 
+               <div>
+                    <h4>Vehicle Name</h4>
+            </div>
+            <div>
+                    <select (change)="checkItem1($event)" style="font-family: monospace;color: black" class="form-control"
+                    id="menulist1">
+                    <option value="">--select--</option>
+                    <option class="selectId" value="{{item1}}" *ngFor="let item1 of menu1">{{item1}}</option>
+            </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1></h1>
+                <div>
+                        <h4 style="margin-top: 18mm;">Vehicle Color</h4>
+                        </div>
+                        <div>
+                                <select (change)="checkItem2($event)" style="font-family: monospace;color: black" class="form-control"
+                                id="menulist2">
+                                <option value="">--select--</option>
+                                <option class="selectId" value="{{item2}}" *ngFor="let item2 of menu2">{{item2}}</option>
+                        </select>
+                </div>
+        </div>
+        
+</div>
+<div class="container">
+        <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
+                <button (click)="change()" class="btn btn-warning" style="margin-top: 7mm;">Change Vehicle</button>
+            </div>
+            <div class="col-md-4">
+                
+            </div>
+</div>

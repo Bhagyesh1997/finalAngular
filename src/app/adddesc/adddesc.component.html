@@ -1,0 +1,63 @@
+<div class="container">
+        <div class="col-md-4">
+                
+        </div>
+        <div class="col-md-4">
+            <div>
+                <h4>Pick a Vehicle</h4>
+            </div>
+            <div>
+                    <select (change)="check1($event)" style="font-family: monospace;color: black" class="form-control" id="menulist">
+                        <option value="">--select--</option>
+                    <option class="selectId" value="{{item}}" *ngFor="let item of menu">{{item}}</option>
+                    </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+                
+        </div>
+</div>
+<form (ngSubmit)="submit()">
+<div class="container">
+        <div class="col-lg-6">
+                <div class="form-group">
+                        <label for="name" style="margin-top: 5mm;">Model</label>
+                        <input type="text" class="form-control" id="model" name="model" placeholder="Model"
+                        [(ngModel)]="detail.model">
+                </div>
+                <div class="form-group">
+                        <label for="name" style="margin-top: 5mm;">Color</label>
+                        <select (change)="check2($event)" style="font-family: monospace;color: black" class="form-control" id="menulist">
+                                <option value="">--select--</option>
+                                <option class="selectId" value="{{item}}" *ngFor="let item of colors">{{item}}</option>
+                        </select>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="form-group">
+                        <label for="engine" style="margin-top: 5mm;">Engine</label>
+                        <input type="text" class="form-control" id="engine" name="engine" placeholder="Engine"
+                        [(ngModel)]="detail.engine">
+                </div>
+                <div class="form-group">
+                        <label for="price" style="margin-top: 5mm;">Price</label>
+                        <input type="text" class="form-control" id="price" name="price" placeholder="Price"
+                        [(ngModel)]="detail.price">
+                </div>
+        </div>
+</div>
+<div class="container">
+                <div class="col-md-4">
+                
+                </div>
+                <div class="col-md-4">
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Add Model</button>
+                                <button type="button" (click)="cancel()" class="btn btn-danger" style="margin-left: 40mm;">Cancel</button>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                
+                </div>
+</div>
+</form>
