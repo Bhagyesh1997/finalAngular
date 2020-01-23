@@ -1,1 +1,19 @@
-<p>makepayment works!</p>
+<h2 style="font-family: monospace;text-align: center;color: black" >Order Details</h2>
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="background-color: white;">
+    <table style="width: 100%;">
+        <tr><th><h5>Name</h5></th><td align="center">:</td><td align="right">{{model.vehicleId.name}}</td></tr>
+        <tr><th><h5>Model</h5></th><td align="center">:</td><td align="right">{{model.model}}</td></tr>
+        <tr><th><h5>Color</h5></th><td align="center">:</td><td align="right">{{model.color}}</td></tr>
+    </table>
+    <table style="width: 100%;">
+        <tr><th><h3>Remaining Amount</h3></th><td align="right"><h3>{{model.price - 1000}} Rs</h3></td></tr>
+        <tr><th><h3>Tax + RTO</h3></th><td align="right"><h3>{{model.price*0.18}} Rs</h3></td></tr>
+        <tr><th><h3>Total Price</h3></th><td align="right"><h3>{{finalAmt}} Rs</h3></td></tr>
+    </table>
+    <br />
+    <button type="button" class="btn btn-success" style="width: 100%;margin-bottom: 2mm;" (click)="paid()">Pay</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>

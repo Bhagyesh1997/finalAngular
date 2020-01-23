@@ -25,7 +25,7 @@ export class BookpaymentComponent implements OnInit {
     let modelId = parseInt(sessionStorage.getItem("modelId"));
     let obsRes = this.service.bookVehicle(userId,modelId);
     obsRes.subscribe((res)=>{
-      this.router.navigate(['/user/home']);
+      this.router.navigate(['/user/booksummary']);
     })
   }
 }

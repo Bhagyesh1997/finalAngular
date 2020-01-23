@@ -38,4 +38,9 @@ export class BookingsummaryComponent implements OnInit {
       this.router.navigate(['/user/booksummary']);
     });
   }
+  pay(no)
+  {
+    console.log(no);
+    this.router.navigate(["/user/makepayment/"+no]);
+  }
 }

@@ -30,6 +30,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { BookingsummaryComponent } from './bookingsummary/bookingsummary.component';
 import { ChangevehicleComponent } from './changevehicle/changevehicle.component';
 import { MakepaymentComponent } from './makepayment/makepayment.component';
+import { PaymentsComponent } from './payments/payments.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MakepaymentComponent } from './makepayment/makepayment.component';
     LogoutComponent,
     BookingsummaryComponent,
     ChangevehicleComponent,
-    MakepaymentComponent
+    MakepaymentComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +88,8 @@ import { MakepaymentComponent } from './makepayment/makepayment.component';
         { path : "logout", component :LogoutComponent , canActivate:[AuthService]},
         { path : "booksummary", component :BookingsummaryComponent , canActivate:[AuthService]},
         { path : "change", component: ChangevehicleComponent, canActivate:[AuthService]},
-        { path : "makepayment", component: MakepaymentComponent, canActivate:[AuthService]}
+        { path : "makepayment/:Id", component: MakepaymentComponent, canActivate:[AuthService]},
+        { path : "payments", component: PaymentsComponent, canActivate:[AuthService]}
       ]},
       {path : "admin",component : AdminComponent, children:[
         { path : "stock", component : StockComponent, canActivate:[AuthService]},

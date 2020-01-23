@@ -13,11 +13,12 @@
                 <tbody>
                   <tr *ngFor="let v of vehicle" ng-click="selectedVehicle()">
                     <td>{{v.detailsId.vehicleId.name}}</td>
-                    <td>{{v.detailsId.color}}</td>
-                    <td>{{v.detailsId.price}}</td>
-                    <td>{{v.bookingDate}}</td>
-                    <td><button type="button" (click)="view(v.detailsId.detailsId)" class="btn btn-primary">Change Vehicle</button></td>
-                    <td><button type="button" (click)="cancel(v.detailsId.detailsId)" class="btn btn-danger">Cancel Vehicle</button></td>
+                    <td style="margin-left: 68mm;">{{v.detailsId.color}}</td>
+                    <td style="margin-left: 68mm;">{{v.detailsId.price}}</td>
+                    <td style="margin-left: 68mm;">{{v.bookingDate}}</td>
+                    <td align="right"><button type="button" (click)="view(v.detailsId.detailsId)" class="btn btn-primary">Change Vehicle</button>
+                    <button type="button" (click)="cancel(v.detailsId.detailsId)" style="margin-left: 3mm;" class="btn btn-danger">Cancel Vehicle</button>
+                    <button type="button" (click)="pay(v.detailsId.detailsId)" style="margin-left: 3mm;" class="btn btn-success">Make Payment</button></td>
                   </tr>
                 </tbody>
         </table>

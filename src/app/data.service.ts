@@ -81,4 +81,8 @@ export class DataService {
   {
     return this.http.delete(this.url+"admin/delete/"+no);
   }
+  purchaseVehicle(userId,detailsId)
+  {
+    return this.http.get(this.url+"vehicle/purchase/"+userId+"/"+detailsId);
+  }
 }
