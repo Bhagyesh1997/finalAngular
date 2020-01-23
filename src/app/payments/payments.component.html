@@ -1,1 +1,20 @@
-<p>payments works!</p>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of data">
+                <td>{{d.detailsId.vehicleId.name}}</td>
+                <td>{{d.detailsId.color}}</td>
+                <td>{{d.finalAmount}} Rs</td>
+                <td>{{d.dateOfSale}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

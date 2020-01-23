@@ -21,7 +21,7 @@ export class MakepaymentComponent implements OnInit {
     obsRes.subscribe((res)=>{
       this.model = res;
       console.log(this.model.detailsId);
-      this.finalAmt = (this.model.price - 1000) + (this.model.price * 0.18);
+      this.finalAmt = this.model.price + (this.model.price * 0.18);
     });
   }
   paid()
@@ -29,10 +29,11 @@ export class MakepaymentComponent implements OnInit {
     let userId = parseInt(sessionStorage.getItem("userId"));
     let obsRes = this.service.purchaseVehicle(userId, this.model.vehicleId.vehicleId);
     obsRes.subscribe((res)=>{
-      if(res)
-      {
-        this.router.navigate(['/user/payments']);
-      }
-    })
+        this.f1();
+    });
+  }
+  f1()
+  {
+    this.router.navigate(['/user/payments']);
   }
 }

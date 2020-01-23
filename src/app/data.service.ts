@@ -85,4 +85,16 @@ export class DataService {
   {
     return this.http.get(this.url+"vehicle/purchase/"+userId+"/"+detailsId);
   }
+  getOrders(userId)
+  {
+    return this.http.get(this.url+"user/viewhistory/"+userId);
+  }
+  registerUser(user)
+  {
+    return this.http.post(this.url+"user/register",user);
+  }
+  changePassword(user,pass)
+  {
+    return this.http.get(this.url+"user/changepassword/"+user+"/"+pass);
+  }
 }

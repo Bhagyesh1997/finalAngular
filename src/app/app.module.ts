@@ -14,7 +14,6 @@ import { AddvehicleComponent } from './addvehicle/addvehicle.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ContactusComponent } from './contactus/contactus.component';
 import { SalesComponent } from './sales/sales.component';
 import { BooktestComponent } from './booktest/booktest.component';
 import { GetquoteComponent } from './getquote/getquote.component';
@@ -31,6 +30,7 @@ import { BookingsummaryComponent } from './bookingsummary/bookingsummary.compone
 import { ChangevehicleComponent } from './changevehicle/changevehicle.component';
 import { MakepaymentComponent } from './makepayment/makepayment.component';
 import { PaymentsComponent } from './payments/payments.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,6 @@ import { PaymentsComponent } from './payments/payments.component';
     HomeComponent,
     RegisterComponent,
     AboutusComponent,
-    ContactusComponent,
     SalesComponent,
     BooktestComponent,
     GetquoteComponent,
@@ -58,7 +57,8 @@ import { PaymentsComponent } from './payments/payments.component';
     BookingsummaryComponent,
     ChangevehicleComponent,
     MakepaymentComponent,
-    PaymentsComponent
+    PaymentsComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +72,6 @@ import { PaymentsComponent } from './payments/payments.component';
         { path : "explore", component : ExploreComponent},
         { path : "booktest", component : BooktestComponent},
         { path : "getquote", component : GetquoteComponent},
-        { path : "contactus", component : ContactusComponent},
         { path : "aboutus", component : AboutusComponent},
         { path : "login", component : LoginComponent},
         { path : "register", component : RegisterComponent}
@@ -89,7 +88,8 @@ import { PaymentsComponent } from './payments/payments.component';
         { path : "booksummary", component :BookingsummaryComponent , canActivate:[AuthService]},
         { path : "change", component: ChangevehicleComponent, canActivate:[AuthService]},
         { path : "makepayment/:Id", component: MakepaymentComponent, canActivate:[AuthService]},
-        { path : "payments", component: PaymentsComponent, canActivate:[AuthService]}
+        { path : "payments", component: PaymentsComponent, canActivate:[AuthService]},
+        { path : "changepass", component: ChangepasswordComponent, canActivate:[AuthService]}
       ]},
       {path : "admin",component : AdminComponent, children:[
         { path : "stock", component : StockComponent, canActivate:[AuthService]},
